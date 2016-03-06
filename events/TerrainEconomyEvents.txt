@@ -1,0 +1,45 @@
+#Event IDs 199000 to 199999
+
+province_event = {
+	id = 199000
+	title = "EVTNAME199000" # Drain $PROVINCENAME$ March!
+	desc = "EVTDESC199000"
+	
+	trigger = {
+		owned_by = THIS
+		controlled_by = THIS
+		terrain = marsh
+		
+		owner = {
+			war = no
+			#steam_turbine = 1
+			money = 2000
+		}
+		
+		NOT = { has_province_modifier = drained_marsh }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "EVTOPTA199000" # Do it.
+		
+		add_province_modifier = {
+			name = drained_marsh
+			duration = -1
+		}
+		
+		owner = {
+			treasury = -1000
+		}
+		
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVTOPTB199000" # Let's not.
+		ai_chance = { factor = 0 }
+	}
+}
