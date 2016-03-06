@@ -1,0 +1,5 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME199000;Drain $PROVINCENAME$ Marsh!;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC199000;The marshes in $PROVINCENAME$ can be drained to make room for more agriculture. Should those marshes be drained?;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA199000;Do it.;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB199000;Let's not.;;;;;;;;;;;;;;;;;;;;;;;;;;x
