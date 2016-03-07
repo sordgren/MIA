@@ -3,3 +3,6 @@ EVTNAME199000;Drain $PROVINCENAME$ Marsh!;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC199000;The marshes in $PROVINCENAME$ can be drained to make room for more agriculture. Should those marshes be drained?;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA199000;Do it.;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTB199000;Let's not.;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME199001;Life Rating Improved!;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC199001;The life rating of $PROVINCENAME$ has improved as a result of local efforts to make it more liveable.;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA199001;Okay.;;;;;;;;;;;;;;;;;;;;;;;;;;x

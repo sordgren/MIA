@@ -69,5 +69,31 @@ province_event = {
 
 province_event = {
 	id = 199001
-	title = "EVTNAME199001" #
+	title = "EVTNAME199001" # Life Rating Improved!
+	desc = "EVTDESC199001" #
+	
+	trigger = {
+		owned_by = THIS
+		controlled_by = THIS
+		owner = {
+			war = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 96
+		
+		modifier = {
+			factor = 0.75
+			is_capital = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA199001"
+		
+		life_rating = 5
+		
+		ai_chance = { factor = 100 }
+	}
 }
