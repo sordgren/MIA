@@ -1,0 +1,283 @@
+country_event = {
+	id = 19370
+	title = "EVTNAME19370" #The $FROMCOUNTRY$ Overlords
+	desc = "EVTDESC19370"
+	news = yes
+	news_desc_long = "EVTDESC19370_NEWS_LONG"
+	news_desc_medium = "EVTDESC19370_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19370_NEWS_SHORT"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT19370OPTA"
+		FROM = { create_vassal = THIS }
+		random_owned = {
+			limit = {
+				FROM = { government = fascist_dictatorship }
+				owner = {
+					civilized = yes
+					NOT = { government = fascist_dictatorship }
+				}
+			}
+			owner = {
+				ruling_party_ideology = fascist
+				government = fascist_dictatorship
+				political_reform = none_voting
+				political_reform = party_appointed
+				political_reform = no_meeting
+				political_reform = state_press
+				political_reform = state_controlled
+				political_reform = underground_parties
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = { government = proletarian_dictatorship }
+				owner = {
+					civilized = yes
+					NOT = { government = proletarian_dictatorship }
+				}
+			}
+			owner = {
+				ruling_party_ideology = communist
+				government = proletarian_dictatorship
+				political_reform = none_voting
+				political_reform = party_appointed
+				political_reform = no_meeting
+				political_reform = state_press
+				political_reform = state_controlled
+				political_reform = underground_parties
+				social_reform = good_minimum_wage
+				social_reform = eight_hours
+				social_reform = good_subsidies
+				social_reform = good_pensions
+				social_reform = good_health_care
+				nationalize = yes
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = { government = bourgeois_dictatorship }
+				owner = {
+					civilized = yes
+					NOT = { government = bourgeois_dictatorship }
+				}
+			}
+			owner = {
+				ruling_party_ideology = anarcho_liberal
+				government = bourgeois_dictatorship
+				political_reform = universal_voting
+				political_reform = party_appointed
+				political_reform = yes_meeting
+				political_reform = free_press
+				political_reform = all_trade_unions
+				political_reform = underground_parties
+				social_reform = no_minimum_wage
+				social_reform = no_work_hour_limit
+				social_reform = no_safety
+				social_reform = no_subsidies
+				social_reform = no_pensions
+				social_reform = no_health_care
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+				}
+				owner = {
+					civilized = yes
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+					}
+				}
+			}
+			owner = {
+				government = hms_government
+				random_owned = {
+					limit = {
+						owner = { NOT = { vote_franschise = universal_voting } }
+					}
+					owner = { political_reform = universal_weighted_voting }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								political_parties = underground_parties
+								political_parties = harassment
+								political_parties = gerrymandering
+							}
+						}
+					}
+					owner = { political_reform = non_secret_ballots }
+				}
+				random_owned = {
+					limit = {
+						owner = { upper_house_composition = party_appointed }
+					}
+					owner = { political_reform = appointed }
+				}
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+				election = yes
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+				}
+				owner = {
+					civilized = yes
+					OR = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+			owner = {
+				government = democracy
+				random_owned = {
+					limit = {
+						owner = { NOT = { vote_franschise = universal_voting } }
+					}
+					owner = { political_reform = universal_weighted_voting }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								political_parties = underground_parties
+								political_parties = harassment
+								political_parties = gerrymandering
+							}
+						}
+					}
+					owner = { political_reform = non_secret_ballots }
+				}
+				random_owned = {
+					limit = {
+						owner = { upper_house_composition = party_appointed }
+					}
+					owner = { political_reform = appointed }
+				}
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+				election = yes
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = {
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+					}
+				}
+				owner = {
+					civilized = yes
+					NOT = { government = absolute_monarchy }
+					NOT = { government = prussian_constitutionalism }
+				}
+			}
+			owner = {
+				government = absolute_monarchy
+				ruling_party_ideology = reactionary
+				political_reform = none_voting
+				political_reform = appointed
+				political_reform = underground_parties
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				FROM = { government = presidential_dictatorship }
+				owner = {
+					civilized = yes
+					NOT = { government = presidential_dictatorship }
+				}
+			}
+			owner = {
+				government = presidential_dictatorship
+				ruling_party_ideology = reactionary
+				political_reform = none_voting
+				political_reform = appointed
+				political_reform = no_meeting
+				political_reform = state_press
+				political_reform = underground_parties
+				
+				add_country_modifier = {
+					name = national_confusion
+					duration = 365
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				tag = FROM
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { tag = FROM }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = { tag = FROM }
+			}
+			leave_alliance = THIS
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				location = { is_core = THIS }
+			}
+			militancy = 4
+		}
+	}
+}
