@@ -12,7 +12,7 @@ province_event = {
 		
 		owner = {
 			war = no
-			#steam_turbine = 1
+			steam_turbine = 1
 			money = 2000
 		}
 		
@@ -21,6 +21,21 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 24
+		
+		modifier = {
+			factor = 0.5
+			owner = {
+				has_country_flag = is_draining_marshes
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			
+			owner = {
+				has_country_flag = is_not_draining_marshes
+			}
+		}
 	}
 	
 	option = {
@@ -33,6 +48,8 @@ province_event = {
 		
 		owner = {
 			treasury = -1000
+			clr_country_flag = is_not_draining_marshes
+			set_country_flag = is_draining_marshes
 		}
 		
 		ai_chance = { factor = 100 }
@@ -40,6 +57,17 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTB199000" # Let's not.
+		
+		owner = {
+			clr_country_flag = is_not_draining_marshes
+			set_country_flag = is_draining_marshes
+		}
+		
 		ai_chance = { factor = 0 }
 	}
+}
+
+province_event = {
+	id = 199001
+	title = "EVTNAME199001" #
 }
