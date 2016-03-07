@@ -78,6 +78,8 @@ province_event = {
 		owner = {
 			war = no
 		}
+		
+		NOT = { life_rating = 35 }
 	}
 	
 	mean_time_to_happen = {
