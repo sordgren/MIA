@@ -6,9 +6,9 @@ political_decisions = {
 		
 		allow = {
 			OR = {
-				ruling_party = liberal
-				ruling_party = anarcho_liberal
-				ruling_party = socialist
+				ruling_party_ideology = liberal
+				ruling_party_ideology = anarcho_liberal
+				ruling_party_ideology = socialist
 			}
 		}
 		
@@ -49,9 +49,9 @@ political_decisions = {
 				
 				NOT = { 
 					OR = {
-						ruling_party = conservative 
-						ruling_party = reactionary
-						ruling_party = fascist
+						ruling_party_ideology = conservative 
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
 					}
 				}
 			}
