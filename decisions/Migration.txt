@@ -1,0 +1,60 @@
+political_decisions = {
+	encourage_immigration = {
+		potential = {
+			NOT = { has_country_modifier = encouraging_immigration }
+		}
+		
+		allow = {
+			OR = {
+				ruling_party = liberal
+				ruling_party = anarcho_liberal
+				ruling_party = socialist
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = encouraging_immigration
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war_exhaustion = 1
+			}
+		}
+	}
+	
+	stop_encouraging_immigration = {
+		potential = {
+			has_country_modifier = encouraging_immigration
+		}
+		
+		allow = {
+			militancy = 2
+		}
+		
+		effect = {
+			remove_country_modifier = encouraging_immigration
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				
+				NOT = { 
+					OR = {
+						ruling_party = conservative 
+						ruling_party = reactionary
+						ruling_party = fascist
+					}
+				}
+			}
+		}
+	}
+}

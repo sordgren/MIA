@@ -770,3 +770,8 @@ drained_marsh = {
 	mine_rgo_eff = 0.5
 	icon = 5
 }
+
+encouraging_immigration = {
+	immigrant_attract = 1
+	tax_efficiency = -0.1
+}
