@@ -60,11 +60,6 @@ country_event = {
 				social_reform = good_pensions
 				social_reform = good_health_care
 				nationalize = yes
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
-				}
 			}
 		}
 		random_owned = {
@@ -90,11 +85,6 @@ country_event = {
 				social_reform = no_subsidies
 				social_reform = no_pensions
 				social_reform = no_health_care
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
-				}
 			}
 		}
 		random_owned = {
@@ -138,11 +128,6 @@ country_event = {
 						owner = { upper_house_composition = party_appointed }
 					}
 					owner = { political_reform = appointed }
-				}
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
 				}
 				election = yes
 			}
@@ -190,11 +175,6 @@ country_event = {
 					}
 					owner = { political_reform = appointed }
 				}
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
-				}
 				election = yes
 			}
 		}
@@ -218,11 +198,6 @@ country_event = {
 				political_reform = none_voting
 				political_reform = appointed
 				political_reform = underground_parties
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
-				}
 			}
 		}
 		random_owned = {
@@ -241,11 +216,6 @@ country_event = {
 				political_reform = no_meeting
 				political_reform = state_press
 				political_reform = underground_parties
-				
-				add_country_modifier = {
-					name = national_confusion
-					duration = 365
-				}
 			}
 		}
 		random_country = {

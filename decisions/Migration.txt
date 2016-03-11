@@ -10,6 +10,11 @@ political_decisions = {
 				ruling_party_ideology = anarcho_liberal
 				ruling_party_ideology = socialist
 			}
+			
+			#NOT = {
+			#	capital_scope = { continent = north_america }
+			#	capital_scope = { continent = south_america }
+			#}
 		}
 		
 		effect = {
@@ -21,9 +26,18 @@ political_decisions = {
 		
 		ai_will_do = {
 			factor = 1
+			
 			modifier = {
 				factor = 0
-				war_exhaustion = 1
+				
+				NOT = {
+					OR = {
+						ruling_party_ideology = liberal
+						ruling_party_ideology = anarcho_liberal
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = south_america }
+					}
+				}
 			}
 		}
 	}
@@ -52,6 +66,8 @@ political_decisions = {
 						ruling_party_ideology = conservative 
 						ruling_party_ideology = reactionary
 						ruling_party_ideology = fascist
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = south_america }
 					}
 				}
 			}
